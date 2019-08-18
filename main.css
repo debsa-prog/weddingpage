@@ -1,39 +1,3 @@
 *{
   box-sizing: border-box;
 }
-h1{
-  font: 700 2rem Arial;
-}
-h2{
-  font: 1.2rem arial;
-}
-.btn{
-  background-color: greenyellow;
-  margin: 10px;
-  border: 10px solid orange;
-  padding: 10px;
-}
-.headerset{
-    background-color: beige;
-  margin: 10px;
-  border: 10px solid blue;
-  padding: 10px;
-}
-.btnset1{
-  display: inline
-}
-
-.btnset2{
-  display: inline-block;
-}
-.btn22{
-  margin: 0px;
-  border: 0px solid orange;
-  padding: 0px;
-}
-.btnset3{
-  display: block;
-}
-.disp-flex{
-  display: flex;
-}
