@@ -11,7 +11,7 @@ body{
   line-height: 1.5;
   color: #444349;
 }
-.center{
+.center, h1, h2, h3, .gifts, .contact, footer{
     text-align: center; /* a szöveget középre rendezi*/
 }
 h1, h2, h3, ul, ol, p, img {
@@ -37,7 +37,7 @@ h3{
 .bold{
   font-weight: 700;
 }
-.alt-text{
+.alt-text, .faq p{
   font-family: 'Muli',sans-serif;
 }
 img{
@@ -53,6 +53,16 @@ section{
   background: hsla(100,0%,0%,.6);
   color: #d2ba87;
   width: 100%;
+}
+.shrink{
+  margin-bottom: .5rem;
+}
+
+a{
+  color: #bd806e;
+}
+a:hover{
+  color: #eda087;
 }
 /* === header === */
 .cover{
@@ -114,4 +124,18 @@ section{
     width: 25vw;
     margin: 1.5rem auto;
     background-color: #444349;
+}
+/* === faq === */
+.faq-wrap::after{
+  content: "";
+    display: block;
+    height: .1875rem;
+    width: 50vw;
+    margin: 1.5rem auto;
+    background-color: #d2ba87;
+}
+
+/* === footer === */
+footer{
+  background-color: #606060;
 }
