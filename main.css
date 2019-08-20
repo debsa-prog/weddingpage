@@ -2,13 +2,57 @@
   box-sizing: border-box;
 }
 
+/* === common style === */
 
 body{
-    background: url(images/wedding-landing-background.png) repeat center;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #444349;
+  background: url(images/wedding-landing-background.png) repeat center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #444349;
+}
+.center{
+    text-align: center; /* a szöveget középre rendezi*/
+}
+h1, h2, h3, ul, ol, p, img {
+    margin-bottom: 1.5rem;
+}
+
+h1, h2{
+  font-family: 'Great Vibes', cursive;
+}
+
+h1{
+  font-size: 3.15rem;
+  color: #d2ba87;
+}
+
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+
+.bold{
+  font-weight: 700;
+}
+.alt-text{
+  font-family: 'Muli',sans-serif;
+}
+img{
+  width: 7.5rem;
+}
+section{
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+}
+
+.faq, .program{
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+  width: 100%;
 }
 /* === header === */
 .cover{
@@ -18,7 +62,6 @@ body{
   display: flex;
   align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
   justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
-  text-align: center; /* a szöveget középre rendezi*/
 }
 
 .welcome-wrapper {
@@ -43,13 +86,6 @@ body{
     margin: .5rem auto;
 }
 
-.nameline {
-  font-size: 3.15rem;
-  font-family: 'Great Vibes', cursive;
-  color: #d2ba87;
-  margin-bottom: 0;
-}
-
 .dateline::before{
     display: inline-block;
     content: "";
@@ -67,4 +103,15 @@ body{
     width: 1.5rem;
     vertical-align: middle;
     margin: 0 .5rem;
+}
+
+/* === Locations === */
+
+.local::after {
+    display: block;
+    content: "";
+    height: .1875rem;
+    width: 25vw;
+    margin: 1.5rem auto;
+    background-color: #444349;
 }
