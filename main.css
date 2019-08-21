@@ -64,6 +64,7 @@ a{
 a:hover{
   color: #eda087;
 }
+
 /* === header === */
 .cover{
   background: url(images/wedding-landing-cover.jpg) no-repeat 70% center/cover;
@@ -137,5 +138,16 @@ a:hover{
 
 /* === footer === */
 footer{
+  height: 10vh;
+  width: 100%;
   background-color: #606060;
+  color: #fff;
+  font-size: .875rem;
+  display: flex;
+  align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
+  justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
+  padding: .5rem 1rem;
+}
+footer p{
+  margin: 0;
 }
