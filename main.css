@@ -11,7 +11,7 @@ body{
   line-height: 1.5;
   color: #444349;
 }
-.center, h1, h2, h3, .gifts, .contact, footer{
+.center, h1, h2, h3, .locations, .gifts, .contact, footer{
     text-align: center; /* a szöveget középre rendezi*/
 }
 h1, h2, h3, ul, ol, p, img {
@@ -49,7 +49,7 @@ section{
   padding: .5rem 1rem;
 }
 
-.faq, .program{
+.faq, .program {
   background: hsla(100,0%,0%,.6);
   color: #d2ba87;
   width: 100%;
@@ -69,7 +69,7 @@ a:hover{
 .cover{
   background: url(images/wedding-landing-cover.jpg) no-repeat 70% center/cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
   justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
@@ -83,7 +83,20 @@ a:hover{
   width: 100vw;
 }
 
-.tagline {
+@media (min-width:768px){
+  .welcome-wrapper{
+    width: 50vw;
+    border-radius: 4px;
+    padding: 1.25rem;
+  }
+  .nameline{
+    font-size: 7rem;
+  }
+   .tagline {
+    text-transform: uppercase;
+  }
+}
+.headtext {
     font-size: 1.25rem;
     letter-spacing: .15rem;
 }
@@ -116,6 +129,7 @@ a:hover{
     margin: 0 .5rem;
 }
 
+
 /* === Locations === */
 
 .local::after {
@@ -126,8 +140,23 @@ a:hover{
     margin: 1.5rem auto;
     background-color: #444349;
 }
+
+@media (min-width:768px){
+  .local-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* === program === */
+@media (min-width:768px){
+  .program-wrapper{
+    width: 30vw;
+    margin: 0 auto;
+  }
+}
 /* === faq === */
-.faq-wrap::after{
+.faq-col::after{
   content: "";
     display: block;
     height: .1875rem;
@@ -136,6 +165,25 @@ a:hover{
     background-color: #d2ba87;
 }
 
+@media (min-width:768px){
+  .faq-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+  .faq-col{
+    width: 30vw;
+    vertical-align: top;
+    
+  }
+  .faq-col h3{
+    text-align: left;
+  }
+  
+  .faq-col::after{
+    display: none;
+}
+}
 /* === footer === */
 footer{
   height: 10vh;
