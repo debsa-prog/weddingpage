@@ -1,25 +1,85 @@
+/* ============================
+        
+        General styles
+
+=============================*/
+
 *{
   box-sizing: border-box;
 }
 
-/* === common style === */
-
 body{
   background: url(images/wedding-landing-background.png) repeat center;
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Muli',sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
   color: #444349;
 }
-.center, h1, h2, h3, .locations, .gifts, .contact, footer{
-    text-align: center; /* a szöveget középre rendezi*/
-}
-h1, h2, h3, ul, ol, p, img {
+
+/* ========================
+
+      Layout styles
+
+=========================*/
+/* === single direction margin declaration 4 vertical rhythm === */
+
+h1, h2, h3, 
+ul, ol, 
+p, 
+img {
     margin-bottom: 1.5rem;
 }
 
+.locations,
+.gift,
+.contact,
+footer,
+.center,
+h1, h2, h3 {
+  text-align: center;
+}
+
+img{
+  width: 7.5rem;
+}
+
+.locations,
+.program,
+.gift,
+.faq,
+.contact {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: .5rem 1rem;
+}
+
+.shrink{
+  margin-bottom: .5rem;
+}
+
+/* ========================
+
+       color styles
+
+=========================*/
+a{
+  color: #bd806e;
+}
+a:hover{
+  color: #eda087;
+}
+/* ========================
+
+       Font styles
+
+=========================*/
+
+
 h1, h2{
   font-family: 'Great Vibes', cursive;
+}
+.gift, .contact{
+  font-family: 'Libre Baskerville', serif;
 }
 
 h1{
@@ -32,37 +92,16 @@ h2{
 }
 h3{
   font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .bold{
   font-weight: 700;
 }
-.alt-text, .faq p{
-  font-family: 'Muli',sans-serif;
-}
-img{
-  width: 7.5rem;
-}
-section{
-  width: 95%;
-  margin: 1.5rem auto;
-  padding: .5rem 1rem;
-}
 
-.faq, .program {
-  background: hsla(100,0%,0%,.6);
-  color: #d2ba87;
-  width: 100%;
-}
-.shrink{
-  margin-bottom: .5rem;
-}
 
-a{
-  color: #bd806e;
-}
-a:hover{
-  color: #eda087;
+.alt-section h2{
+  margin-top: 1rem;
 }
 
 /* === header === */
@@ -132,6 +171,10 @@ a:hover{
 
 /* === Locations === */
 
+.local h3{
+  font-weight: 700;
+}
+
 .local::after {
     display: block;
     content: "";
@@ -146,16 +189,41 @@ a:hover{
     display: flex;
     justify-content: space-between;
   }
+  .local{
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+  .local::after {
+    display: none;
+  }
 }
 
 /* === program === */
+.program{
+  width: 100%;
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+}
+
 @media (min-width:768px){
   .program-wrapper{
-    width: 30vw;
+    width: 30%;
     margin: 0 auto;
   }
 }
+
+/*=== gifts ===*/
+
+
 /* === faq === */
+
+.faq {
+  width: 100%;
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
+}
+
 .faq-col::after{
   content: "";
     display: block;
@@ -168,22 +236,25 @@ a:hover{
 @media (min-width:768px){
   .faq-wrap{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: flex-start;
   }
   .faq-col{
-    width: 30vw;
+    width: 30%;
     vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;
     
   }
-  .faq-col h3{
+  .faq-col h3 {
     text-align: left;
   }
   
   .faq-col::after{
     display: none;
+  }
 }
-}
+
 /* === footer === */
 footer{
   height: 10vh;
@@ -196,6 +267,18 @@ footer{
   justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
   padding: .5rem 1rem;
 }
+
+footer small {
+    line-height: 1.5;
+}
 footer p{
   margin: 0;
+}
+
+@media (min-width: 768px) {
+
+  footer {
+    min-height: 7vh;
+  }
+
 }
