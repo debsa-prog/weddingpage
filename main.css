@@ -2,7 +2,7 @@
         
         General styles
 
-=============================*/
+============================= */
 
 *{
   box-sizing: border-box;
@@ -52,14 +52,19 @@ img{
   margin: 1.5rem auto;
   padding: .5rem 1rem;
 }
+.alt-section h2{
+  margin-top: 1rem;
+}
 
-.shrink{
-  margin-bottom: .5rem;
+.alt-section{
+  width: 100%;
+  background: hsla(100,0%,0%,.6);
+  color: #d2ba87;
 }
 
 /* ========================
 
-       color styles
+       link styles
 
 =========================*/
 a{
@@ -78,7 +83,7 @@ a:hover{
 h1, h2{
   font-family: 'Great Vibes', cursive;
 }
-.gift, .contact{
+.gift, .contact, .headtext, h3{
   font-family: 'Libre Baskerville', serif;
 }
 
@@ -92,26 +97,22 @@ h2{
 }
 h3{
   font-size: 1.5rem;
-  font-family: 'Libre Baskerville', serif;
 }
 
-.bold{
-  font-weight: 700;
-}
-
-
-.alt-section h2{
-  margin-top: 1rem;
-}
-
-/* === header === */
-.cover{
-  background: url(images/wedding-landing-cover.jpg) no-repeat 70% center/cover;
-  height: 100vh;
+footer, .cover {
   width: 100%;
   display: flex;
   align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
   justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
+}
+/* ======================== 
+
+          header 
+
+======================== */
+.cover{
+  background: url(images/wedding-landing-cover.jpg) no-repeat 70% center/cover;
+  height: 100vh;
 }
 
 .welcome-wrapper {
@@ -122,19 +123,6 @@ h3{
   width: 100vw;
 }
 
-@media (min-width:768px){
-  .welcome-wrapper{
-    width: 50vw;
-    border-radius: 4px;
-    padding: 1.25rem;
-  }
-  .nameline{
-    font-size: 7rem;
-  }
-   .tagline {
-    text-transform: uppercase;
-  }
-}
 .headtext {
     font-size: 1.25rem;
     letter-spacing: .15rem;
@@ -149,16 +137,7 @@ h3{
     margin: .5rem auto;
 }
 
-.dateline::before{
-    display: inline-block;
-    content: "";
-    background-color: #fff;
-    height: 1px;
-    width: 1.5rem;
-    vertical-align: middle;
-    margin: 0 .5rem;
-}
-.dateline::after{
+.dateline::before, .dateline::after{
     display: inline-block;
     content: "";
     background-color: #fff;
@@ -168,8 +147,11 @@ h3{
     margin: 0 .5rem;
 }
 
+/* ======================== 
 
-/* === Locations === */
+        Locations 
+
+======================== */
 
 .local h3{
   font-weight: 700;
@@ -184,44 +166,38 @@ h3{
     background-color: #444349;
 }
 
-@media (min-width:768px){
-  .local-wrapper{
-    display: flex;
-    justify-content: space-between;
-  }
-  .local{
-    width: 30%;
-    padding: 1.5rem;
-    margin: .5rem;
-  }
-  .local::after {
-    display: none;
-  }
+/* ======================== 
+
+    program styles
+
+======================== */
+
+.program p {
+  font-style: italic;
 }
 
-/* === program === */
-.program{
-  width: 100%;
-  background: hsla(100,0%,0%,.6);
-  color: #d2ba87;
+.program ul {
+  letter-spacing: .025rem;
 }
 
-@media (min-width:768px){
-  .program-wrapper{
-    width: 30%;
-    margin: 0 auto;
-  }
+/* ========================
+
+        gift styles 
+
+======================== */
+.gift p:last-child {   /* To even out the bottom and top margins of this section. */
+  margin-bottom: 0;
 }
 
-/*=== gifts ===*/
+/* ======================== 
 
+          faq 
 
-/* === faq === */
+======================== */
 
-.faq {
-  width: 100%;
-  background: hsla(100,0%,0%,.6);
-  color: #d2ba87;
+.quest{
+  margin-bottom: .5rem;
+  font-weight: 700;
 }
 
 .faq-col::after{
@@ -233,52 +209,90 @@ h3{
     background-color: #d2ba87;
 }
 
-@media (min-width:768px){
+/* ======================== 
+
+            footer 
+
+======================== */
+footer{
+  height: 10vh;
+  background-color: #606060;
+  color: #fff;
+  font-size: .875rem;
+  padding: .5rem 1rem;
+}
+
+footer small {
+  line-height: 1.5;
+}
+footer p{
+  margin: 0;
+}
+
+/* ======================== 
+
+   desktop media
+
+======================== */
+
+
+@media (min-width: 768px) {
+  
+  .local::after, .faq-col::after {
+    display: none;
+  }
+  
+  .local, .faq-col {
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+  
+  /* === header ===*/
+  
+  .welcome-wrapper{
+    width: 50vw;
+    border-radius: 4px;
+    padding: 1.25rem;
+  }
+  .nameline{
+    font-size: 7rem;
+  }
+   .tagline {
+    text-transform: uppercase;
+  }
+  
+  /* === locations ===*/
+  .local-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  /* === program ===*/
+  
+  .program-wrapper{
+    width: 30%;
+    margin: 0 auto;
+  }
+  
+   /* === faq ===*/
+  
   .faq-wrap{
     display: flex;
     justify-content: space-around;
     align-content: flex-start;
   }
   .faq-col{
-    width: 30%;
-    vertical-align: top;
-    padding: 1.5rem;
-    margin: .5rem;
-    
+    vertical-align: top;    
   }
   .faq-col h3 {
     text-align: left;
   }
+ 
+  /* === footer ===*/
   
-  .faq-col::after{
-    display: none;
-  }
-}
-
-/* === footer === */
-footer{
-  height: 10vh;
-  width: 100%;
-  background-color: #606060;
-  color: #fff;
-  font-size: .875rem;
-  display: flex;
-  align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
-  justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
-  padding: .5rem 1rem;
-}
-
-footer small {
-    line-height: 1.5;
-}
-footer p{
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-
   footer {
     min-height: 7vh;
   }
-
 }
