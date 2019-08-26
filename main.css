@@ -9,7 +9,7 @@
 }
 
 body{
-  background: url(images/wedding-landing-background.png) repeat center;
+  background: url(assets/wedding-landing-background.png) repeat center;
   font-family: 'Muli',sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -111,7 +111,7 @@ footer, .cover {
 
 ======================== */
 .cover{
-  background: url(images/wedding-landing-cover.jpg) no-repeat 70% center/cover;
+  background: url(assets/wedding-landing-cover.jpg) no-repeat 70% center/cover;
   height: 100vh;
 }
 
