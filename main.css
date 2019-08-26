@@ -30,6 +30,7 @@ img {
     margin-bottom: 1.5rem;
 }
 
+
 .locations,
 .gift,
 .contact,
@@ -56,7 +57,7 @@ img{
   margin-top: 1rem;
 }
 
-.alt-section{
+.alt-section {
   width: 100%;
   background: hsla(100,0%,0%,.6);
   color: #d2ba87;
@@ -99,17 +100,19 @@ h3{
   font-size: 1.5rem;
 }
 
-footer, .cover {
+.cover, audio, footer {
   width: 100%;
   display: flex;
   align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
   justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
 }
-/* ======================== 
+
+/* ===================== 
 
           header 
 
 ======================== */
+
 .cover{
   background: url(assets/wedding-landing-cover.jpg) no-repeat 70% center/cover;
   height: 100vh;
