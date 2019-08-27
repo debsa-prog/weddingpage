@@ -30,6 +30,9 @@ img {
     margin-bottom: 1.5rem;
 }
 
+section{
+  background-attachment: fixed;
+}
 
 .locations,
 .gift,
@@ -63,6 +66,12 @@ img{
   color: #d2ba87;
 }
 
+.cover, audio, footer {
+  width: 100%;
+  display: flex;
+  align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
+  justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
+}
 /* ========================
 
        link styles
@@ -100,12 +109,7 @@ h3{
   font-size: 1.5rem;
 }
 
-.cover, audio, footer {
-  width: 100%;
-  display: flex;
-  align-items: center; /* a képernyő hosszában középre rendezi az elemeket*/
-  justify-content: center; /* a képernyő széltében középre rendezi az elemeket*/
-}
+
 
 /* ===================== 
 
@@ -116,6 +120,7 @@ h3{
 
 .cover{
   background: url(assets/wedding-landing-cover.jpg) no-repeat 70% center/cover;
+  background-attachment: fixed;
   height: 100vh;
   overflow: hidden;
 }
@@ -126,7 +131,7 @@ h3{
   background: url(assets/wind.png);
   display: block;
   width: 3000px;
-  height: 800px;
+  height: 100vh;
   top:0;
   animation: moveleft 60s linear infinite;
     z-index: 100;
@@ -177,7 +182,10 @@ h3{
         Locations 
 
 ======================== */
-
+.locations {
+  background-attachment: fixed;
+  overflow: hidden;
+}
 .local h3{
   font-weight: 700;
 }
