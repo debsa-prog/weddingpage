@@ -8,18 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7CMuli:400,700%7CLibre+Baskerville:300,400,700" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="assets/wedding-landing-favicon.png">
   <title>Zoe & Alex wedding page</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var beep = $("#beep")[0];
-        $("#play").mouseenter(function() {
-          music.play();
-        });
-      });
-    </script>
 </head>
 <body>
-  <header id="play" class="cover center">
+ <header id="play" class="cover center">
     <div class="welcome-wrapper focus-in-expand-fwd">
       <div class="tagline headtext">We're getting married!</div>
       <h1 class="nameline">Zoe & Alex</h1>
@@ -27,9 +18,8 @@
     </div>
     <div class="wind"></div>
   </header>
-  <audio id="music" loop controls preload="auto">
-    <source src="assets/Beautiful%20-%20AShamaluevMusic.mp3" type="audio/mp3" />
-  </audio>
+  
+  <audio id="player" loop controls autoplay><source src="assets/Beautiful%20-%20AShamaluevMusic.mp3"></audio>
   <section class="locations">
     <div>    
       <h2>Locations</h2>
